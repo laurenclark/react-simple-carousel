@@ -1,8 +1,8 @@
 :root {
-    --background-primary: #f3f4f5;
+    --background-primary: #0f0e14;
     --foreground-primary: #111111;
-    --background-secondary: #333333;
-    --foreground-secondary: #ffffff;
+    --background-secondary: #ffffff;
+    --foreground-secondary: #333333;
     --anchor: #c3e1ff;
     --anchor-change: #5ca6f0;
     --accent: #3a3a3a;
@@ -19,7 +19,6 @@ body {
     background: var(--background-primary);
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+.carousel {
+    background: var(--background-primary);
 }
