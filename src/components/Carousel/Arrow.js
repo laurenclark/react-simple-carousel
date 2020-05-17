@@ -11,10 +11,12 @@ export default function Arrow({ left, right }) {
     };
     return (
         <button
+            focusable="false"
+            aria-hidden="true"
             className={`arrow ${left ? 'arrow__left' : ''}${
                 right ? 'arrow__right' : ''
             }`}>
-            <div className="arrow__label" focusable="false" aria-hidden="true">
+            <div className="arrow__label">
                 <span className="sr-only">{srLabel('View')}</span>
                 <svg
                     className="arrow__inner"
