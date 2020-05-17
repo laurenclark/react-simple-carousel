@@ -6,7 +6,7 @@ export default function Slide({ sourcePath, isActive, altText }) {
     const [viewed, setViewed] = useState(0);
 
     useEffect(() => {
-        if (isActive && sourcePath === sourcePath) {
+        if (isActive) {
             setViewed(viewed + 1);
         }
         return () => {};
