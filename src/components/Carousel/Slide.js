@@ -14,12 +14,8 @@ export default function Slide({ sourcePath, isActive, altText }) {
 
     return (
         <div className="slide">
-            <picture className="slide__inner">
-                <div className="slide__inner--mod">
-                    <div className="slide__view-counter">Viewed {viewed}</div>
-                    <img src={`${baseURL}${sourcePath}`} alt={altText} />
-                </div>
-            </picture>
+            <div className="slide__view-counter">Viewed {viewed}</div>
+            <img src={`${baseURL}${sourcePath}`} alt={altText} />
         </div>
     );
 }

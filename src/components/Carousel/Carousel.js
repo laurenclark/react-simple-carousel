@@ -12,8 +12,8 @@ function Carousel() {
 
     return (
         <div className="carousel">
-            <div style={{ overflowX: 'hidden' }}>
-                <div className="carousel__inner">
+            <div className="carousel__track-container">
+                <div className="carousel__track">
                     {slideImages.map((slideData) => (
                         <Slide
                             key={slideData.id}
@@ -22,11 +22,11 @@ function Carousel() {
                             isActive={() => isActive(slideData.name)}
                         />
                     ))}
-                    <div className="controls">
-                        <Arrow left="true" />
-                        <Arrow right="true" />
-                    </div>
                 </div>
+            </div>
+            <div className="controls">
+                <Arrow left="true" />
+                <Arrow right="true" />
             </div>
         </div>
     );

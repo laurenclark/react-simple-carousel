@@ -160,35 +160,32 @@ button {
     position: absolute;
 }
 
-.app {
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
 .carousel {
     position: relative;
-    &__inner {
-        flex-direction: row;
-        display: flex;
-        will-change: transform;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+    &__track-container {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    &__track {
+        height: 100%;
+        position: relative;
+        transition: transform 0.3s ease-in;
     }
 }
 
 .slide {
-    position: relative;
-    flex-shrink: 0;
-    overflow: auto;
-    align-self: center;
-    &__view-counter {
-        background: rgba(255, 255, 255, 0.7);
-        display: inline-block;
-        padding: 20px;
-        position: absolute;
-    }
-    picture {
-        img {
-            width: 100%;
-        }
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 }
 
