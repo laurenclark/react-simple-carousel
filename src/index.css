@@ -161,18 +161,25 @@ button {
 }
 
 .app {
-    background: var(--background-primary);
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .carousel {
-    display: flex;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 20px solid white;
+    position: relative;
 }
+
+.carousel__inner {
+        flex-direction: row;
+        display: flex;
+        will-change: transform;
+    }
 
 .slide {
     position: relative;
+    flex-shrink: 0;
+    overflow: auto;
+    align-self: center;
 }
 
 .slide__view-counter {
@@ -181,6 +188,10 @@ button {
         padding: 20px;
         position: absolute;
     }
+
+.slide picture img {
+            width: 100%;
+        }
 
 .controls {
     top: 0;

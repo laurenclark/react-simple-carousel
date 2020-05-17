@@ -6,19 +6,29 @@ import Arrow from './Arrow';
 function Carousel() {
     // const [slideIndex, setSlideIndex] = useState(0);
     const slideImages = ImageData;
+    const [isActive, setIsActive] = useState(false);
+
     // const imagesLength = slideImages.length;
 
     return (
         <div className="carousel">
-            {slideImages.map((slideData) => (
-                <Slide
-                    key={slideData.id}
-                    sourcePath={slideData.name}
-                    altText={slideData.alt}
-                />
-            ))}
-            <Arrow left="true" />
-            <Arrow right="true" />
+            <div style={{ overflowX: 'hidden' }}>
+                <div className="carousel__inner">
+                    {slideImages.map((slideData) => (
+                        <Slide
+                            key={slideData.id}
+                            sourcePath={slideData.name}
+                            altText={slideData.alt}
+                            onPress={() => setIsActive(true)}
+                            isActive={() => isActive(slideData.name)}
+                        />
+                    ))}
+                    <div className="controls">
+                        <Arrow left="true" />
+                        <Arrow right="true" />
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

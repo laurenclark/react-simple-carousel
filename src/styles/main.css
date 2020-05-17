@@ -161,23 +161,34 @@ button {
 }
 
 .app {
-    background: var(--background-primary);
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .carousel {
-    display: flex;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 20px solid white;
+    position: relative;
+    &__inner {
+        flex-direction: row;
+        display: flex;
+        will-change: transform;
+    }
 }
 
 .slide {
     position: relative;
+    flex-shrink: 0;
+    overflow: auto;
+    align-self: center;
     &__view-counter {
         background: rgba(255, 255, 255, 0.7);
         display: inline-block;
         padding: 20px;
         position: absolute;
+    }
+    picture {
+        img {
+            width: 100%;
+        }
     }
 }
 
