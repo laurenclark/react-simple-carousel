@@ -15,7 +15,7 @@ export default function Arrow({ left, right }) {
                 right ? 'arrow__right' : ''
             }`}>
             <div className="arrow__label" focusable="false" aria-hidden="true">
-                <span class="sr-only">{srLabel('View')}</span>
+                <span className="sr-only">{srLabel('View')}</span>
                 <svg
                     className="arrow__inner"
                     focusable="false"
