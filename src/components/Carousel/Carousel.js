@@ -19,7 +19,6 @@ function Carousel() {
                             key={slideData.id}
                             sourcePath={slideData.name}
                             altText={slideData.alt}
-                            onPress={() => setIsActive(true)}
                             isActive={() => isActive(slideData.name)}
                         />
                     ))}

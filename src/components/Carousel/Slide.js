@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import slideImages from './slide-images';
 
-export default function Slide({ sourcePath, isActive, altText, onPress }) {
+export default function Slide({ sourcePath, isActive, altText }) {
     const baseURL = `/assets/images/`;
     const [viewed, setViewed] = useState(0);
 
@@ -13,7 +13,7 @@ export default function Slide({ sourcePath, isActive, altText, onPress }) {
     }, []);
 
     return (
-        <div className="slide" onClick={onPress}>
+        <div className="slide">
             <picture className="slide__inner">
                 <div className="slide__inner--mod">
                     <div className="slide__view-counter">Viewed {viewed}</div>
