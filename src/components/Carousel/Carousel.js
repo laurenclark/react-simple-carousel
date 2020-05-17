@@ -10,6 +10,13 @@ function Carousel() {
 
     return (
         <div className="carousel">
+            {slideImages.map((slideData) => (
+                <Slide
+                    key={slideData.id}
+                    sourcePath={slideData.name}
+                    altText={slideData.alt}
+                />
+            ))}
             <Arrow left="true" />
             <Arrow right="true" />
         </div>
