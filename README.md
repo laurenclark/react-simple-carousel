@@ -1,4 +1,4 @@
-# React Simple Carousel 🎠
+# React Simple Image Carousel 🎠
 
 A basic carousel component which uses:
   - PostCSS, PostCSS Nesting
