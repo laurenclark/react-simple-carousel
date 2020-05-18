@@ -3,10 +3,11 @@ import React from 'react';
 export default function Arrow({ left, right }) {
     const srLabel = function srLabelDirection(text) {
         if (left && text) {
-            return `${text} previous`;
-        }
-        if (right && text) {
-            return `${text} next`;
+            return `${text} previous slide`;
+        } else if (right && text) {
+            return `${text} next slide`;
+        } else {
+            return `View adjacent slide`;
         }
     };
     return (
