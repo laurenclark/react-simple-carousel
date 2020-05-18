@@ -6,7 +6,7 @@ A basic carousel component which uses:
   - Create React App
   - React Hooks
 
-You can use your own images, replace the slide-images.js array with your own image data and place the images inside `public/assets/images`
+You can use your own images, replace the slide-images.js array with your own image data and place the images inside `public/assets/images` and your image data (alt text, filename, id) inside `/src/components/Carousel/slide-images.js`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
