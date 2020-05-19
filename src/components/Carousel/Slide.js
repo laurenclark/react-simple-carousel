@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import slideImages from './slide-images';
 
-export default function Slide({ sourcePath, isActive, altText }) {
+export default function Slide({ imageData, currentIndex }) {
     const baseURL = `/assets/images/`;
-    const [viewed, setViewed] = useState(0);
-
-    useEffect(() => {
-        if (isActive) {
-            setViewed(viewed + 1);
-        }
-        return () => {};
-    }, []);
+    const image = imageData[currentIndex];
 
     return (
         <div className="slide">
-            <div className="slide__view-counter">Viewed {viewed}</div>
-            <img src={`${baseURL}${sourcePath}`} alt={altText} />
+            <div className="slide__view-counter">
+                Viewed {(image.count += 1)} times
+            </div>
+            <img src={`${baseURL}${image.name}`} alt={image.alt} />
         </div>
     );
 }
