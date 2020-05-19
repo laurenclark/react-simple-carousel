@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import imageData from './slide-images';
 import Slide from './Slide';
 import Arrow from './Arrow';
@@ -6,6 +7,12 @@ import Arrow from './Arrow';
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const imagesLength = imageData.length - 1;
+    const handlers = useSwipeable({
+        onSwipedLeft: () => nextHandler(),
+        onSwipedRight: () => prevHandler(),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    });
 
     const prevHandler = () => {
         const index = currentIndex === 0 ? imagesLength : currentIndex - 1;
@@ -18,7 +25,7 @@ function Carousel() {
     };
 
     return (
-        <div className="carousel">
+        <div className="carousel" {...handlers}>
             <div className="carousel__track">
                 <Slide imageData={imageData} currentIndex={currentIndex} />
             </div>
