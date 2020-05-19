@@ -18,7 +18,9 @@ function Carousel() {
 
     return (
         <div className="carousel">
-            <Slide imageData={imageData} currentIndex={currentIndex} />
+            <div className="carousel__track">
+                <Slide imageData={imageData} currentIndex={currentIndex} />
+            </div>
             <div className="controls">
                 <Arrow left="true" handleClick={prevHandler} />
                 <Arrow right="true" handleClick={nextHandler} />

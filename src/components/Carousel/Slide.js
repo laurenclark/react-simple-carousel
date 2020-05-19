@@ -6,7 +6,7 @@ export default function Slide({ imageData, currentIndex }) {
 
     return (
         <div className="slide">
-            <div className="slide__view-counter">
+            <div className="slide__counter">
                 Viewed {(image.count += 1)} times
             </div>
             <img src={`${baseURL}${image.name}`} alt={image.alt} />
