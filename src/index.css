@@ -177,6 +177,7 @@ button {
     top: 0;
     bottom: 0;
     width: 100%;
+    opacity: 0;
 }
 
 .slide img {
@@ -310,4 +311,12 @@ button {
         height: 700px;
         width: 70%;
     }
+}
+
+.slideInFromRight .slide {
+    animation-duration: 3s;
+    animation-name: slidein;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    opacity: 1;
 }
