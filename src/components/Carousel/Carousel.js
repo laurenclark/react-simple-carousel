@@ -5,16 +5,14 @@ import Arrow from './Arrow';
 
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    const imagesLength = imageData.length - 1;
     const prevHandler = () => {
-        const index =
-            currentIndex === 0 ? imageData.length - 1 : currentIndex - 1;
+        const index = currentIndex === 0 ? imagesLength : currentIndex - 1;
         setCurrentIndex(index);
     };
 
     const nextHandler = () => {
-        const index =
-            currentIndex === imageData.length - 1 ? 0 : currentIndex + 1;
+        const index = currentIndex === imagesLength ? 0 : currentIndex + 1;
         setCurrentIndex(index);
     };
 
