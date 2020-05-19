@@ -6,6 +6,7 @@ import Arrow from './Arrow';
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const imagesLength = imageData.length - 1;
+
     const prevHandler = () => {
         const index = currentIndex === 0 ? imagesLength : currentIndex - 1;
         setCurrentIndex(index);
