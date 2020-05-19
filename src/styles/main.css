@@ -165,7 +165,7 @@ button {
     height: 600px;
     width: 80%;
     margin: 0 auto;
-    &__track-container {
+    /* &__track-container {
         height: 100%;
         position: relative;
         overflow: hidden;
@@ -174,7 +174,7 @@ button {
         height: 100%;
         position: relative;
         transition: transform 0.3s ease-in;
-    }
+    } */
 }
 
 .slide {

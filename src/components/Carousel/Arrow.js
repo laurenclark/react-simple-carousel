@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Arrow({ left, right }) {
+export default function Arrow({ left, right, handleClick }) {
     const srLabel = function srLabelDirection(text) {
         if (left && text) {
             return `${text} previous slide`;
@@ -12,6 +12,7 @@ export default function Arrow({ left, right }) {
     };
     return (
         <button
+            onClick={handleClick}
             focusable="false"
             aria-hidden="true"
             className={`arrow ${left ? 'arrow__left' : ''}${

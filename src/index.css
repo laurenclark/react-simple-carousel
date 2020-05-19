@@ -165,19 +165,17 @@ button {
     height: 600px;
     width: 80%;
     margin: 0 auto;
-}
-
-.carousel__track-container {
+    /* &__track-container {
         height: 100%;
         position: relative;
         overflow: hidden;
     }
-
-.carousel__track {
+    &__track {
         height: 100%;
         position: relative;
         transition: transform 0.3s ease-in;
-    }
+    } */
+}
 
 .slide {
     position: absolute;

@@ -1,32 +1,33 @@
 import React, { useState } from 'react';
-import ImageData from './slide-images';
+import imageData from './slide-images';
 import Slide from './Slide';
 import Arrow from './Arrow';
 
 function Carousel() {
-    // const [slideIndex, setSlideIndex] = useState(0);
-    const slideImages = ImageData;
-    const [isActive, setIsActive] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    // const imagesLength = slideImages.length;
+    const prevHandler = () => {
+        const index =
+            currentIndex === 0 ? imageData.length - 1 : currentIndex - 1;
+        setCurrentIndex(index);
+    };
+
+    const nextHandler = () => {
+        const index =
+            currentIndex === imageData.length - 1 ? 0 : currentIndex + 1;
+        setCurrentIndex(index);
+    };
 
     return (
         <div className="carousel">
             <div className="carousel__track-container">
                 <div className="carousel__track">
-                    {slideImages.map((slideData) => (
-                        <Slide
-                            key={slideData.id}
-                            sourcePath={slideData.name}
-                            altText={slideData.alt}
-                            isActive={() => isActive(slideData.name)}
-                        />
-                    ))}
+                    <Slide imageData={imageData} currentIndex={currentIndex} />
                 </div>
             </div>
             <div className="controls">
-                <Arrow left="true" />
-                <Arrow right="true" />
+                <Arrow left="true" handleClick={prevHandler} />
+                <Arrow right="true" handleClick={nextHandler} />
             </div>
         </div>
     );
