@@ -4,8 +4,6 @@ import imageData from './slide-images';
 import Slide from './Slide';
 import Arrow from './Arrow';
 
-imageData.count = null;
-
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [animation, setAnimation] = useState('');
