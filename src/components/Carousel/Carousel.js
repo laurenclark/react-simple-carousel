@@ -6,7 +6,6 @@ import Arrow from './Arrow';
 
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [animation, setAnimation] = useState();
     const imagesLength = imageData.length - 1;
     const handlers = useSwipeable({
         onSwipedLeft: () => nextHandler(),
