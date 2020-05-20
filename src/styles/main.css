@@ -223,7 +223,7 @@ button {
         height: 1em;
         display: inline-block;
         font-size: 3rem;
-        transform: translate(-2px, 3px);
+        transform: translate(-7px, 0px);
     }
     &__right {
         transform: rotate(180deg);
