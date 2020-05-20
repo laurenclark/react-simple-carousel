@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/44efd8c4-693c-4c83-9ca5-ce9080963a50/deploy-status)](https://app.netlify.com/sites/react-simple-carousel/deploys)
+
 # React Simple Image Carousel/Slideshow 🎠
 
 View it here -> https://react-simple-carousel.netlify.app/
