@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 export default function Arrow({ left, right, handleClick }) {
     const srLabel = function srLabelDirection(text) {
         if (left && text) {
@@ -32,3 +32,9 @@ export default function Arrow({ left, right, handleClick }) {
         </button>
     );
 }
+
+Arrow.propTypes = {
+    handleClick: PropTypes.func,
+    left: PropTypes.string,
+    right: PropTypes.string
+};
