@@ -1,5 +1,7 @@
 import React from 'react';
-export default function Slide({ imageData, currentIndex, animation }) {
+import PropTypes from 'prop-types';
+
+export default function Slide({ imageData, currentIndex }) {
     const baseURL = `/assets/images/`;
     const image = imageData[currentIndex];
 
@@ -12,3 +14,8 @@ export default function Slide({ imageData, currentIndex, animation }) {
         </div>
     );
 }
+
+Slide.propTypes = {
+    imageData: PropTypes.arrayOf(PropTypes.object),
+    currentIndex: PropTypes.number
+};
