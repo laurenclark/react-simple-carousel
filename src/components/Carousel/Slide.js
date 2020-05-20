@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Animate from 'animate.css';
 export default function Slide({ imageData, currentIndex, animation }) {
     const baseURL = `/assets/images/`;
