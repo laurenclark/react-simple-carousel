@@ -158,15 +158,10 @@ button {
     height: 600px;
     width: 100%;
     margin: 0 auto;
-    &__track-container {
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
     &__track {
         height: 100%;
         position: relative;
-        transition: transform 0.3s ease-in;
+        overflow: hidden;
     }
 }
 
@@ -175,7 +170,7 @@ button {
     top: 0;
     bottom: 0;
     width: 100%;
-    opacity: 0;
+    will-change: content;
     img {
         width: 100%;
         height: 100%;
@@ -304,12 +299,4 @@ button {
         height: 700px;
         width: 70%;
     }
-}
-
-.slideInFromRight .slide {
-    animation-duration: 3s;
-    animation-name: slidein;
-    transform: translateX(0);
-    transition: all 1s ease-in-out;
-    opacity: 1;
 }

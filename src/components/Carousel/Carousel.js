@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import imageData from './slide-images';
 import Slide from './Slide';
 import Arrow from './Arrow';
 
+imageData.count = null;
+
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [direction, setDirection] = useState('');
+    const [animation, setAnimation] = useState('');
     const imagesLength = imageData.length - 1;
     const handlers = useSwipeable({
         onSwipedLeft: () => nextHandler(),
@@ -16,31 +18,31 @@ function Carousel() {
     });
 
     const prevHandler = () => {
-        setDirection('left');
+        setAnimation('animate__slideInRight');
         const index = currentIndex === 0 ? imagesLength : currentIndex - 1;
         setCurrentIndex(index);
+        setTimeout(() => {
+            setAnimation('');
+        }, 200);
     };
 
     const nextHandler = () => {
-        setDirection('right');
+        setAnimation('animate__slideInLeft');
         const index = currentIndex === imagesLength ? 0 : currentIndex + 1;
         setCurrentIndex(index);
-    };
-
-    const slideDirection = (direction) => {
-        if (direction === 'left') {
-            return 'slideInFromRight';
-        } else if (direction === 'right') {
-            return 'slideInFromLeft';
-        } else {
-            return '';
-        }
+        setTimeout(() => {
+            setAnimation('');
+        }, 200);
     };
 
     return (
-        <div className={`carousel ${slideDirection(direction)}`} {...handlers}>
+        <div className="carousel" {...handlers}>
             <div className="carousel__track">
-                <Slide imageData={imageData} currentIndex={currentIndex} />
+                <Slide
+                    imageData={imageData}
+                    currentIndex={currentIndex}
+                    animation={animation}
+                />
             </div>
             <div className="controls">
                 <Arrow left="true" handleClick={prevHandler} />
