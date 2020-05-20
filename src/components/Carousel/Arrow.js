@@ -15,6 +15,7 @@ export default function Arrow({ left, right, handleClick }) {
             onClick={handleClick}
             focusable="false"
             aria-hidden="true"
+            tabindex="-1"
             className={`arrow ${left ? 'arrow__left' : ''}${
                 right ? 'arrow__right' : ''
             }`}>
