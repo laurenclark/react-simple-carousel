@@ -1,5 +1,7 @@
 # React Simple Image Carousel/Slideshow 🎠
 
+View it here -> https://react-simple-carousel.netlify.app/
+
 A basic carousel component which uses:
   - PostCSS, PostCSS Nesting
   - Autoprefixer
