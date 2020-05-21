@@ -25,10 +25,15 @@ function Carousel() {
         setCurrentIndex(index);
     };
 
+    const loadStyle = {
+        color: 'white',
+        fontSize: '2rem'
+    };
+
     return (
         <div className="carousel" {...handlers}>
             <div className="carousel__track">
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<div style={loadStyle}>Loading...</div>}>
                     <Slide imageData={imageData} currentIndex={currentIndex} />
                 </Suspense>
             </div>
