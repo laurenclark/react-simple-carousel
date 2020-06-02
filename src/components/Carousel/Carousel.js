@@ -1,9 +1,8 @@
 import React, { useState, Suspense } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import imageData from './slide-images';
+import Slide from './Slide';
 import Arrow from './Arrow';
-
-const Slide = React.lazy(() => import('./Slide'));
 
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,15 +31,15 @@ function Carousel() {
 
     return (
         <div className="carousel" {...handlers}>
-            <div className="carousel__track">
-                <Suspense fallback={<div style={loadStyle}>Loading...</div>}>
+            <Suspense fallback={<div style={loadStyle}>Loading...</div>}>
+                <div className="carousel__track">
                     <Slide imageData={imageData} currentIndex={currentIndex} />
-                </Suspense>
-            </div>
-            <div className="controls">
-                <Arrow left="true" handleClick={prevHandler} />
-                <Arrow right="true" handleClick={nextHandler} />
-            </div>
+                </div>
+                <div className="controls">
+                    <Arrow left="true" handleClick={prevHandler} />
+                    <Arrow right="true" handleClick={nextHandler} />
+                </div>
+            </Suspense>
         </div>
     );
 }
