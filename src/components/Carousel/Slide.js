@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 export default function Slide({ imageData, currentIndex }) {
@@ -7,9 +7,6 @@ export default function Slide({ imageData, currentIndex }) {
 
     return (
         <div className="slide">
-            <div className="slide__counter">
-                Viewed {(image.count += 1)} time{image.count > 1 ? 's' : null}
-            </div>
             <img src={`${baseURL}${image.name}`} alt={image.alt} />
         </div>
     );
